@@ -1,16 +1,12 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run "npm run dev" in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run "npm run deploy" to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
-
+import {Client} from "@gradio/client/dist/client";
 
 export default {
   async fetch(request, env, ctx) {
-    return new Response('Hello World Bro!');
+    const client = await Client.connect("aureliusivan/DiffuseCraft");
+    const result = await client.predict("/update_task_options", {
+      model_name: "stabilityai/stable-diffusion-xl-base-1.0", task_name: "txt2img",
+    });
+
+    return new Response(JSON.stringify(result));
   },
 };

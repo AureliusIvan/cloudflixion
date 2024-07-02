@@ -1,5 +1,8 @@
 {
   "name": "cloudflixion",
   "version": "1.0.0",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@gradio/client": "^1.2.1"
+  }
 }
