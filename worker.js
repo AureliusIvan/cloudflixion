@@ -1,4 +1,6 @@
-import {Client} from "@gradio/client/dist/client";
+// import {Client} from "@gradio/client/dist/client";
+
+const {Client} = require("@gradio/client/dist/client");
 
 export default {
   async fetch(request, env, ctx) {
