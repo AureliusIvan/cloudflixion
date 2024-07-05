@@ -1,5 +1,5 @@
 import {IgApiClient} from 'instagram-private-api';
-import {sample} from 'node:';
+import {sample} from 'lodash';
 
 
 export default {
