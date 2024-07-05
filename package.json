@@ -1,5 +1,10 @@
 {
   "name": "cloudflixion",
   "version": "1.0.0",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "instagram-private-api": "^1.46.1",
+    "lodash": "^4.17.21",
+    "re2": "^1.21.3"
+  }
 }

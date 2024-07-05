@@ -15,3 +15,8 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: create env file
+        run: |
+          touch .env
+          echo ENGINE_API_KEY=${{ secrets.IG_USERNAME }} >> .env
+          echo ENGINE_API_SECRET=${{ secrets.IG_PASSWORD }} >> .env
